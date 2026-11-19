@@ -85,3 +85,37 @@ This changes the environment bootstrap only. The numerical analysis cells,
 model hyperparameters, random seeds, input checks, and output algorithms are
 unchanged. The updated notebook still needs a clean end-to-end execution with
 the three original input files and the archived geomagnetic input table.
+
+## Portable release addendum (19 November 2026)
+
+The notebook now has a dedicated input-setup cell. It does not mount Google
+Drive or assume a user's account path. On a local system it reads data/ or
+SATELLITE_DATA_DIR. In Colab without inputs, it requests one source ZIP and
+extracts only the four expected file names into /content/data. Results are
+written to results/ or SATELLITE_RESULTS_DIR, separately from the input.
+
+The 2024 space-weather input is mandatory and never silently downloaded.
+Reference comparisons, if supplied, live in optional data/reference/.
+The scientific calculations and fixed RNG seeds have not been changed.
+The exact portable export still needs an independent full run with all four
+source files. The SATCAT extraction-date evidence is still pending.
+
+## Post-run verification (19 November 2026)
+
+The earlier statements about a pending clean execution describe the initial
+release before its independent Google Colab test. The user has now completed
+a portable end-to-end run without mounting Google Drive, uploading the four
+archived inputs in a ZIP. The resulting archive was independently examined.
+
+The generated 26-item audit reports 25 OK, zero FAIL, and one PENDING item:
+verification of the SATCAT extraction date. The output inventory contains 44
+files; every registered SHA-256 and file size was verified. Held-out RF AP,
+ROC AUC and Brier were recalculated from saved predictions and match the
+archived values. WACCM-X and NRLMSIS results were inspected as recorded
+in `VALIDACAO_EXECUCAO_INDEPENDENTE.md`.
+
+The independent result does not resolve the source provenance gap, the
+May 2024 storm median discrepancy with the earlier aggregate-only analysis,
+probability calibration, domain-transfer limitations, or data redistribution.
+The initial inspection had no access to all original sources locally; this
+later verification uses the completed Colab output archive instead.
