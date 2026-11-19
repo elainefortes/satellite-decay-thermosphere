@@ -24,3 +24,4 @@ active_satellites.csv
 satcat.csv
 indices_maio2024_v8.csv
 *.nc
+!data/indices_maio2024_v8.csv
