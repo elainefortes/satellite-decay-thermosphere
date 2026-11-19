@@ -1,0 +1,19 @@
+
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.env
+*.log
+*.joblib
+*.pkl
+*.png
+*.svg
+*.pdf
+results/
+revisao_jbcs_2026/
+data/*
+!data/README.md
+# Include the frozen historical index table only after explicit review.
+# !data/indices_maio2024_v8.csv
+*.cram
+*.crai
