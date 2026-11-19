@@ -121,8 +121,7 @@ The frozen historical space-weather index table (`data/indices_maio2024_v8.csv`)
 - **`indices_maio2024_v8.csv`**: A study-specific, frozen 24-record table of
   historical solar F10.7/F10.7a and geomagnetic Ap inputs used for the
   May 10-12, 2024 NRLMSIS 2.0 analysis. The exact primary-source attribution
-  and preparation history still require documentation. This file is not
-  currently included in the public repository. Archived SHA-256:
+  and preparation history still require documentation. The frozen index table is publicly available at [data/indices_maio2024_v8.csv](data/indices_maio2024_v8.csv). Archived SHA-256:
   `31860b6ea963f7d57c7d7cecd27771899c23491cc1afff4b49af8f113c926605`.
 
 To reproduce the *archived* numerical results, use the same four snapshots
