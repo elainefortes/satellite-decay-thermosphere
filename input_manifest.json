@@ -15,7 +15,7 @@
     }
   },
   "historical_index_input": "indices_maio2024_v8.csv",
-  "historical_index_sha256": null,
+  "historical_index_sha256": "31860b6ea963f7d57c7d7cecd27771899c23491cc1afff4b49af8f113c926605",
   "assumed_satcat_cutoff": "2026-10-31",
   "satcat_cutoff_verified": false,
   "note": "Source data not bundled. The SATCAT extraction date and historical space-weather file checksum must be verified separately."
