@@ -97,12 +97,7 @@ this differs from the previous aggregate-only analysis.
 
 ## Data availability and provenance
 
-The four archived input files used for the independent run on 2026-11-19
-are not publicly redistributed in this repository. A frozen input archive
-(`satellite_inputs.zip`, approximately 3.4 MB) is retained separately for
-potential confidential peer review, subject to editorial arrangements and
-applicable third-party redistribution conditions. No personal Google Drive
-access is required to execute the notebook once the input archive is obtained.
+The frozen historical space-weather index table (`data/indices_maio2024_v8.csv`) is publicly available in this repository. The original CelesTrak datasets and WACCM-X dataset are not redistributed here; their sources and provenance are documented below. The computational notebook, dependency specifications, and verification scripts are provided to support independent examination of the analyses. Exact numerical reproduction requires the archived input versions identified by their SHA-256 checksums.
 
 - **`active_satellites.csv`**: Orbital element snapshot obtained from
   [CelesTrak](https://celestrak.org/). The author confirmed an access/download
