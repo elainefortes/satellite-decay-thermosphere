@@ -15,14 +15,11 @@ Four required inputs (original archived snapshots):
 - `DEN-CO2scaling2000-2500_v2.nc`
 - `indices_maio2024_v8.csv`
 
-The inputs are NOT distributed in this repository. For peer review, the
-reproducibility data package (`satellite_inputs.zip`, approximately 3.4 MB)
-is held separately under restricted access. Access may be arranged through
-editorial-approved channels, subject to source-provider redistribution terms.
-A restricted Google Drive link by itself does not grant reviewers access;
-authorized reviewers must be granted permission to that individual file.
-Please contact the corresponding author through the editorial office if
-necessary. Do not publish a personal Drive link or share account credentials.
+The four required inputs consist of three third-party datasets and one frozen historical space-weather index table. The file `data/indices_maio2024_v8.csv` is publicly available in this repository.
+
+The original CelesTrak orbital data and SATCAT snapshots are not redistributed here. The WACCM-X thermospheric density scaling dataset can be obtained from the University of Birmingham (DOI: 10.25500/edata.bham.00001075).
+
+The archived input checksums are documented in `input_manifest.json`. Current CelesTrak downloads may differ from the historical snapshots used in the study, and therefore may not reproduce the exact numerical results.
 
 To reproduce the archived results, obtain the identical files; their archived
 SHA-256 fingerprints are listed in `input_manifest.json`. The 2024 three-hour
