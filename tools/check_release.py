@@ -43,8 +43,13 @@ def main():
     first_code = next(("".join(c["source"]) for c in nb["cells"]
                        if c["cell_type"] == "code"), "")
     if '"pymsis": "0.12.0"' not in first_code or 'subprocess.check_call' not in first_code:
-        problems.append("Missing Colab dependency installation cell")
-    if code_count != 24:
+        problems.append("Missing dependency installation cell")
+    code_cells = ["".join(c["source"]) for c in nb["cells"] if c["cell_type"] == "code"]
+    if len(code_cells) < 2 or "Upload satellite_inputs.zip" not in code_cells[1]:
+        problems.append("Missing portable input setup")
+    if any("drive.mount(" in src or "/content/drive" in src for src in code_cells):
+        problems.append("Notebook contains a Google Drive dependency")
+    if code_count != 25:
         problems.append(f"Unexpected number of code cells: {code_count}")
     try:
         import nbformat
