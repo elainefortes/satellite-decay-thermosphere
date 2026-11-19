@@ -17,3 +17,10 @@ data/*
 # !data/indices_maio2024_v8.csv
 *.cram
 *.crai
+
+# Archived input snapshots and portable input bundles
+satellite_inputs.zip
+active_satellites.csv
+satcat.csv
+indices_maio2024_v8.csv
+*.nc
