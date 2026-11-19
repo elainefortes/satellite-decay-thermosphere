@@ -15,9 +15,18 @@ Four required inputs (original archived snapshots):
 - `DEN-CO2scaling2000-2500_v2.nc`
 - `indices_maio2024_v8.csv`
 
-The inputs are NOT distributed in this repository. To reproduce the archived
-results, obtain the identical files; their archived SHA-256 fingerprints are
-listed in `input_manifest.json`. The 2024 three-hour geomagnetic index file
+The inputs are NOT distributed in this repository. For peer review, the
+reproducibility data package (`satellite_inputs.zip`, approximately 3.4 MB)
+is held separately under restricted access. Access may be arranged through
+editorial-approved channels, subject to source-provider redistribution terms.
+A restricted Google Drive link by itself does not grant reviewers access;
+authorized reviewers must be granted permission to that individual file.
+Please contact the corresponding author through the editorial office if
+necessary. Do not publish a personal Drive link or share account credentials.
+
+To reproduce the archived results, obtain the identical files; their archived
+SHA-256 fingerprints are listed in `input_manifest.json`. The 2024 three-hour
+geomagnetic index file
 must contain 24 rows with UTC date, F107, F107a and seven Ap values. It must
 not be replaced by a later download without documenting the new snapshot.
 
