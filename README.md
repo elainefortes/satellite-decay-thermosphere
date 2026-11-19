@@ -81,8 +81,13 @@ The saved held-out RF predictions reproduced AP=0.7752287801,
 AUC=0.9349299651 and Brier=0.0221496338.
 See `VALIDACAO_EXECUCAO_INDEPENDENTE.md` for evidence and limitations.
 
-The date 2026-10-31 is an assumed SATCAT cutoff used for the archived result.
-It is NOT a verified SATCAT extraction date. See `AUDITORIA_CODIGO.md`.
+The author confirmed a CelesTrak download/access date of 2025-10-21 from
+local download history. This is consistent with the orbital epochs in
+`active_satellites.csv` (September to early October 2025), but it cannot be
+the extraction date of the current `satcat.csv` archive: that file includes
+launches and decays dated through 2026-10-30. The date 2026-10-31 is a
+provisional SATCAT cutoff assumed in the study, NOT a verified extraction
+date. See `AUDITORIA_CODIGO.md`.
 
 The Random Forest discriminates cataloged decays in a random stratified test
 but its probabilities are not well calibrated, and transfer to a different
@@ -92,6 +97,51 @@ NRLMSIS 2.0 and WACCM-X density variations are separate analyses, not orbital
 propagation or time-to-reentry simulations. The 2024 storm median at 550 km
 using the archived 24-time by 15-location sample is 80.426869 percent;
 this differs from the previous aggregate-only analysis.
+
+## Data availability and provenance
+
+The four archived input files used for the independent run on 2026-11-19
+are not publicly redistributed in this repository. A frozen input archive
+(`satellite_inputs.zip`, approximately 3.4 MB) is retained separately for
+potential confidential peer review, subject to editorial arrangements and
+applicable third-party redistribution conditions. No personal Google Drive
+access is required to execute the notebook once the input archive is obtained.
+
+- **`active_satellites.csv`**: Orbital element snapshot obtained from
+  [CelesTrak](https://celestrak.org/). The author confirmed an access/download
+  date of **2025-10-21** using local browser download history. The archived
+  orbital epochs range from 2025-09-11 to 2025-10-04; the epoch of an orbital
+  element set is not necessarily its download date.
+- **`satcat.csv`**: Satellite Catalog (SATCAT) snapshot obtained from
+  [CelesTrak](https://celestrak.org/). The archived file contains launches
+  and decays dated through **2026-10-30**, so it cannot be the same
+  2025-10-21 snapshot. Its exact download date remains unverified. The
+  **2026-10-31** SATCAT cutoff in the computational archive is provisional,
+  not documented as the actual acquisition date. A current CelesTrak download
+  is not an identical substitute for this frozen file.
+- **`DEN-CO2scaling2000-2500_v2.nc`**: Thermospheric density scaling factors
+  from the WACCM-X research dataset published via the University of
+  Birmingham's research data archive
+  ([DOI: 10.25500/edata.bham.00001075](https://doi.org/10.25500/edata.bham.00001075)).
+  The archived SHA-256 is recorded in `input_manifest.json`. The source
+  record provides open download access but does not specify a redistribution
+  license; permission to republish this dataset is being clarified.
+- **`indices_maio2024_v8.csv`**: A study-specific, frozen 24-record table of
+  historical solar F10.7/F10.7a and geomagnetic Ap inputs used for the
+  May 10-12, 2024 NRLMSIS 2.0 analysis. The exact primary-source attribution
+  and preparation history still require documentation. This file is not
+  currently included in the public repository. Archived SHA-256:
+  `31860b6ea963f7d57c7d7cecd27771899c23491cc1afff4b49af8f113c926605`.
+
+To reproduce the *archived* numerical results, use the same four snapshots
+and verify their checksums. For local execution, place them in `data/` as
+specified above. In Google Colab, supply a ZIP containing the four files
+when prompted by the notebook. Downloading up-to-date CelesTrak files
+will not reproduce an identical historical snapshot.
+
+A software license has not yet been assigned in this repository. Any
+future license for the original software will not extend to third-party
+input datasets.
 
 ## Project files
 
