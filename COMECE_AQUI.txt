@@ -1,18 +1,6 @@
-GOOGLE COLAB - QUICK START
-
-1. Open SatelitesRevisao_GitHub.ipynb in Google Colab.
-2. Select Runtime > Run all. The first code cell installs pymsis 0.12.0
-   and the other recorded scientific dependencies.
-3. When prompted, mount Google Drive.
-4. Place the archived source files in MyDrive/Aeroespacial:
-   active_satellites.csv
-   satcat.csv
-   revisao_jbcs_2026/dados_atmosfericos/DEN-CO2scaling2000-2500_v2.nc
-   revisao_jbcs_2026/auditoria_v8/indices_maio2024_v8.csv
-5. Outputs go to revisao_jbcs_2026/reexecucao_publica.
-6. If a package was updated after it was already imported, restart the
-   Colab runtime and run all again. Do not upload to GitHub until the
-   clean execution and scientific checks pass.
-
-IMPORTANT: The SATCAT snapshot extraction date is not verified.
-IMPORTANT: No GitHub files have been changed or uploaded.
+1. Open SatelitesRevisao_GitHub.ipynb in Colab.
+2. Start Run all. Do not authorize Google Drive; it is not used.
+3. Upload satellite_inputs.zip when prompted.
+4. Check the last audit output. Download results/ before closing Colab.
+5. See VALIDACAO_EXECUCAO_INDEPENDENTE.md for the verified run.
+6. Do not publish source datasets before reviewing redistribution terms.
