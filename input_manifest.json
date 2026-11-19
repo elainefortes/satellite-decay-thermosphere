@@ -1,0 +1,22 @@
+{
+  "description": "Archived input fingerprints for the 2026 JBCS satellite decay analysis",
+  "files": {
+    "active_satellites.csv": {
+      "sha256": "b4b3e88a9ffcfd15e793bd1eda7ec4570fc056b1249ca6c758dc5ce65e303f48",
+      "records": 12810
+    },
+    "satcat.csv": {
+      "sha256": "4a79c9b205c72c699d40db2053b617396499787769ac619c5f2da6ab3bd0c960",
+      "records": 71228
+    },
+    "DEN-CO2scaling2000-2500_v2.nc": {
+      "sha256": "fe7cc40f4fe7fb40f13ba7c509fb53daaa018c18744f3863131ba61090dbe93f",
+      "size_bytes": 2373733
+    }
+  },
+  "historical_index_input": "indices_maio2024_v8.csv",
+  "historical_index_sha256": null,
+  "assumed_satcat_cutoff": "2026-10-31",
+  "satcat_cutoff_verified": false,
+  "note": "Source data not bundled. The SATCAT extraction date and historical space-weather file checksum must be verified separately."
+}
